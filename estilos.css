@@ -1,0 +1,497 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+/* .border {
+    border: 1px solid black;
+} */
+
+
+ /* Nombrar las areas */
+ header {
+    grid-area: cabeza;
+ }
+ footer {
+    grid-area: pie;
+ }
+#productos {
+    grid-area: productos;
+ }
+
+ nav {
+    grid-area: menu;
+ }
+ aside {
+    grid-area: video;
+ }
+
+
+/* DESKTOP */
+ @media (min-width: 1024px){
+    body {
+        height: 100vh;
+        background-image: linear-gradient(green, rgb(241, 241, 241));
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    header{
+            border-radius: 4px;
+            text-align: center;
+            font-size: 0.75rem;
+            padding: 10px;
+    }
+   span {
+    margin-bottom: 5px;
+    padding: 20px;
+    height: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+   }
+   span:hover {
+       background-color: white;
+       color: green ;
+   }
+   /* Articulos de galeria */
+   article {
+
+       margin: 5px;
+       text-align: center;
+       padding: 10px;
+   }
+  aside {
+    text-align: center;
+    padding: 10px;
+}
+
+footer{
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+
+}
+   /* GRIDS POR AREAS */
+
+    #gridAreas {
+       display: grid;
+       /* grid por areas */
+       grid-template-areas:
+       "cabeza menu menu"/* fila 1 */
+       "productos productos productos"/* fila 2 */
+       "video video video"/* fila 3 */
+       "pie pie pie "/* fila 4 */
+       ;
+       grid-template-columns: 15% auto 20%;
+       grid-template-rows: 1fr 2fr 2fr 1fr;
+   }
+    /* MENU FLEX */
+    .flexMenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    /* GALERIA FLEX */
+    /* .productosFlex {
+       display: flex;
+       flex-flow: row nowrap;
+   } */
+ }
+
+ /* TABLET */
+
+ @media (min-width: 481px) and (max-width: 1023px){
+    body {
+        height: 100vh;
+        background-image: linear-gradient(green, rgb(241, 241, 241));
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    header{
+            border-radius: 4px;
+            text-align: center;
+            font-size: 0.75rem;
+            padding: 10px;
+    }
+   span {
+    margin-bottom: 5px;
+    padding: 20px;
+    height: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+   }
+   span:hover {
+       background-color: white;
+       color: green ;
+   }
+   /* Articulos de galeria */
+   article {
+
+    border-radius: 4px;
+    margin: 5px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+   }
+  aside {
+    text-align: center;
+    padding: 10px;
+}
+
+footer{
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+ /* GRIDS POR AREAS */
+}
+#gridAreas {
+    display: grid;
+    /* grid por areas */
+    grid-template-areas:
+    "cabeza cabeza cabeza"/* fila 1 */
+    "menu menu menu"
+    "productos productos productos"/* fila 2 */
+    "video video video"/* fila 3 */
+    "pie pie pie "/* fila 4 */
+    ;
+    grid-template-columns: 15% auto 20%;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+}
+ /* MENU FLEX */
+ .flexMenu {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+ }
+ /* GALERIA FLEX */
+ /* .productosFlex {
+    display: flex;
+    flex-flow: row nowrap;
+} */
+}
+
+
+@media (max-width: 480px){
+    body {
+        height: 100vh;
+        background-image: linear-gradient(green, rgb(241, 241, 241));
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    header{
+            border-radius: 4px;
+            text-align: center;
+            font-size: 0.75rem;
+            padding: 10px;
+    }
+   span {
+    margin-bottom: 5px;
+    padding: 20px;
+    height: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+   }
+   article {
+
+    border-radius: 4px;
+    margin: 5px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+   }
+  aside {
+     text-align: center;
+    padding: 10px;
+}
+footer{
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+ /* GRIDS POR AREAS */
+}
+
+#gridAreas {
+    display: grid;
+    /* grid por areas */
+    grid-template-areas:
+    "cabeza cabeza"/* fila 1 */
+    "menu menu"
+    "productos productos"/* fila 2 */
+    "video video"/* fila 3 */
+    "pie pie"/* fila 4 */
+    ;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+}
+
+ /* MENU FLEX */
+ .flexMenu {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+ }
+ /* GALERIA FLEX */
+ /* .productosFlex {
+    display: flex;
+    flex-flow: row nowrap;
+} */
+}
+
+
+
+
+/***************************************************/
+/* PRODUCTO */
+/* DESKTOP */
+@media (min-width: 1024px){
+    body {
+        height: 100vh;
+        background-image: linear-gradient(green, rgb(241, 241, 241));
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    header{
+            border-radius: 4px;
+            text-align: center;
+            font-size: 0.75rem;
+            padding: 10px;
+    }
+   span {
+    margin-bottom: 5px;
+    padding: 20px;
+    height: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+   }
+   span:hover {
+       background-color: white;
+       color: green ;
+   }
+   /* Articulos de galeria */
+   article {
+
+       margin: 5px;
+       text-align: center;
+       padding: 10px;
+   }
+  aside {
+    text-align: center;
+    padding: 10px;
+}
+
+footer{
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+
+}
+   /* GRIDS POR AREAS */
+
+    #gridAreas2 {
+       display: grid;
+       /* grid por areas */
+       grid-template-areas:
+       "cabeza menu menu menu"/* fila 1 */
+       "video productos productos productos"/* fila 2 */
+       "pie pie pie pie "/* fila 3 */
+       ;
+       grid-template-columns: 25% 25% 25% 25%;
+       grid-template-rows: 1fr 3fr 1fr;
+   }
+    /* MENU FLEX */
+    .flexMenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .flexMenu2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+  .productosFlex {
+       display: flex;
+       flex-flow: row nowrap;
+   }
+ }
+
+ /* TABLET PRODUCTO */
+ @media (min-width: 481px) and (max-width: 1023px){
+    body {
+        height: 100vh;
+        background-image: linear-gradient(green, rgb(241, 241, 241));
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    header{
+            border-radius: 4px;
+            text-align: center;
+            font-size: 0.75rem;
+            padding: 10px;
+    }
+   span {
+    margin-bottom: 5px;
+    padding: 20px;
+    height: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+   }
+   span:hover {
+       background-color: white;
+       color: green ;
+   }
+   /* Articulos de galeria */
+   article {
+
+       margin: 5px;
+       text-align: center;
+       padding: 10px;
+   }
+  aside {
+    text-align: center;
+    padding: 10px;
+}
+
+footer{
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+
+}
+   /* GRIDS POR AREAS */
+
+    #gridAreas2 {
+       display: grid;
+       /* grid por areas */
+       grid-template-areas:
+       "cabeza cabeza cabeza "
+       " menu menu menu"/* fila 1 */
+       "video productos productos"/* fila 2 */
+       "pie pie pie "/* fila 3 */
+       ;
+       grid-template-columns: 30% 35% 35%;
+       grid-template-rows: 1fr 1fr 3fr 1fr;
+       grid-row-gap: 0;
+   }
+    /* MENU FLEX */
+    .flexMenu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .flexMenu2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+  .productosFlex {
+       display: flex;
+       flex-flow: row nowrap;
+   }
+
+}
+
+/* SMARTPHONE PRODUCTO */
+@media (max-width: 480px){
+    body {
+        height: 100vh;
+        background-image: linear-gradient(green, rgb(241, 241, 241));
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    header{
+            border-radius: 4px;
+            text-align: center;
+            font-size: 0.75rem;
+            padding: 10px;
+    }
+   span {
+    margin-bottom: 5px;
+    padding: 20px;
+    height: 10px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+   }
+   span:hover {
+       background-color: white;
+       color: green ;
+   }
+   /* Articulos de galeria */
+   article {
+
+       margin: 5px;
+       text-align: center;
+       padding: 10px;
+   }
+  aside {
+    text-align: center;
+    padding: 10px;
+}
+
+footer{
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 10px;
+
+}
+   /* GRIDS POR AREAS */
+
+    #gridAreas2 {
+       display: grid;
+       /* grid por areas */
+       grid-template-areas:
+       "cabeza"/* fila 1 */
+       "menu"/* fila 2 */
+       "productos"/* fila 3 */
+       "video"/* fila 4 */
+       "pie "/* fila 5 */
+       ;
+       grid-template-columns: 100%;
+       grid-template-rows: 1fr 3fr 2fr 1fr 1fr;
+       grid-row-gap: 0;
+   }
+    /* MENU FLEX */
+    .flexMenu {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        
+    }
+    .flexMenu2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+  .productosFlex {
+       display: flex;
+       flex-flow: row nowrap;
+       align-content: center;
+   }
+
+}

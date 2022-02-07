@@ -54,7 +54,7 @@
     text-decoration: none;
    }
    span:hover {
-       background-color: white;
+       background-image: linear-gradient(to left, rgb(72, 255, 0),green);
        color: green ;
    }
    /* Articulos de galeria */
@@ -495,3 +495,4 @@ footer{
    }
 
 }
+
